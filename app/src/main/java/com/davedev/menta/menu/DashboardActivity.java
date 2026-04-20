@@ -23,13 +23,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import com.davedev.menta.R;
-import com.davedev.menta.content.plant.ExteriorPlantsActivity;
-import com.davedev.menta.content.plant.FlowersActivity;
-import com.davedev.menta.content.plant.InteriorPlantsActivity;
-import com.davedev.menta.content.plant.SeasonalPlantsActivity;
+import com.davedev.menta.content.plant.TosInfeccionesRespiratoriasActivity;
+import com.davedev.menta.content.plant.Dolor_Muscular;
+import com.davedev.menta.content.plant.Dolor_EstomacalActivity;
+import com.davedev.menta.content.plant.Dolor_Cabeza;
 import com.davedev.menta.content.blog.BlogExteriorPlantsActivity;
 import com.davedev.menta.content.blog.BlogFlowersActivity;
-import com.davedev.menta.content.blog.BlogInteriorPlantsActivity;
+import com.davedev.menta.content.blog.BlogDolorEstomacalActivity;
 import com.davedev.menta.content.blog.BlogSeasonalPlantsActivity;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -104,20 +104,20 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
         btnInterior.setOnClickListener(v -> {
-            Intent intent = new Intent(DashboardActivity.this, InteriorPlantsActivity.class);
+            Intent intent = new Intent(DashboardActivity.this, Dolor_EstomacalActivity.class);
             startActivity(intent);
             finish();
         });
 
 
         btnBlogInterior.setOnClickListener(v -> {
-            Intent intent = new Intent(DashboardActivity.this, BlogInteriorPlantsActivity.class);
+            Intent intent = new Intent(DashboardActivity.this, BlogDolorEstomacalActivity.class);
             startActivity(intent);
             finish();
         });
 
         btnExterior.setOnClickListener(v -> {
-            Intent intent = new Intent(DashboardActivity.this, ExteriorPlantsActivity.class);
+            Intent intent = new Intent(DashboardActivity.this, TosInfeccionesRespiratoriasActivity.class);
             startActivity(intent);
             finish();
         });
@@ -129,7 +129,7 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
         btnSeason.setOnClickListener(v -> {
-            Intent intent = new Intent(DashboardActivity.this, SeasonalPlantsActivity.class);
+            Intent intent = new Intent(DashboardActivity.this, Dolor_Cabeza.class);
             startActivity(intent);
             finish();
         });
@@ -141,7 +141,7 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
         btnFlower.setOnClickListener(v -> {
-            Intent intent = new Intent(DashboardActivity.this, FlowersActivity.class);
+            Intent intent = new Intent(DashboardActivity.this, Dolor_Muscular.class);
             startActivity(intent);
             finish();
         });

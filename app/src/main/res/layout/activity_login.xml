@@ -22,15 +22,15 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:adjustViewBounds="true"
-        android:alpha="0.3"
+        android:alpha="0.9"
+        android:contentDescription="@string/backgroundImage1"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_login"
-        android:contentDescription="@string/backgroundImage1" />
+        app:srcCompat="@drawable/fondo" />
 
     <ImageView
         android:id="@+id/bgLeftImageView"
@@ -72,14 +72,14 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_menta" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/descTextView"
+        style="@style/TextAppearance.MdcTypographyStyles.Headline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.MdcTypographyStyles.Headline5"
-        android:text="Bienvenido a Menta"
+        android:text="Bienvenido a MediCalli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoImageView"
@@ -87,9 +87,9 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
 
     <TextView
         android:id="@+id/titleTextView"
+        style="@style/TextAppearance.MdcTypographyStyles.Headline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.MdcTypographyStyles.Headline6"
         android:text="Inicie sesión para continuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

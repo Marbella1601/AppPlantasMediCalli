@@ -1,16 +1,5 @@
 package com.davedev.menta.login;
 
-/*
- * Nombre del Proyecto: Menta
- * Desarrollador: David Butrón
- * Perfil de Github: https://github.com/DaveDeveloper117/
- * Diseñadore UI/UX: Valam Matías https://github.com/OmniSk8
- * Diseñadore UI/UX: Marco Malagon https://github.com/SpartanTerra69
- * Perfil de Github: https://github.com/OmniSk8/
- * Licencia: https://github.com/DaveDeveloper117/Menta/blob/master/LICENSE
- * URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
- */
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -29,11 +18,13 @@ import com.google.android.material.divider.MaterialDivider;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
-    TextView descTextView,  titleTextView, suppTextView, newAccTextView,registerTextView, forgotPassTextView, errorFieldTextView;
+
+    TextView descTextView, titleTextView, suppTextView, newAccTextView, registerTextView, forgotPassTextView, errorFieldTextView;
     ImageView logoImageView, bgRightImageView, bgLeftImageView;
     TextInputLayout userTextField, passwordTextField;
     TextInputEditText userTextInputEditText, passwordTextInputEditText;
@@ -42,10 +33,15 @@ public class LoginActivity extends AppCompatActivity {
     Animation downMove, upMove, leftMove, rightMove, fadeIn;
     MaterialDivider leftDivider, rightDivider;
 
+    FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        auth = FirebaseAuth.getInstance();
+
         //TextView
         errorFieldTextView = findViewById(R.id.errorFieldTextView);
         descTextView = findViewById(R.id.descTextView);
@@ -54,32 +50,39 @@ public class LoginActivity extends AppCompatActivity {
         newAccTextView = findViewById(R.id.newAccTextView);
         forgotPassTextView = findViewById(R.id.forgotPassTextView);
         registerTextView = findViewById(R.id.registerTextView);
+
         //ImageView
         logoImageView = findViewById(R.id.logoImageView);
         bgRightImageView = findViewById(R.id.bgRightImageView);
         bgLeftImageView = findViewById(R.id.bgLeftImageView);
+
         //TextInput
         userTextField = findViewById(R.id.userTextField);
         passwordTextField = findViewById(R.id.passwordTextField);
+
         //EditText
         userTextInputEditText = findViewById(R.id.userTextInputEditText);
         passwordTextInputEditText = findViewById(R.id.passwordTextInputEditText);
-        //RadioButton
+
         //Button
         loginButton = findViewById(R.id.loginButton);
+
         //Dividers
         leftDivider = findViewById(R.id.leftMaterialDivider);
         rightDivider = findViewById(R.id.rightMaterialDivider2);
+
         //FABs
         facebookFab = findViewById(R.id.facebookFab);
         googleFab = findViewById(R.id.googleFab);
         appleFab = findViewById(R.id.appleFab);
+
         //Animations
         downMove = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.down_move);
         upMove = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.up_move);
         leftMove = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.left_move);
         rightMove = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.right_move);
         fadeIn = AnimationUtils.loadAnimation(LoginActivity.this, R.anim.fade_in);
+
         //Set Animations
         bgLeftImageView.setAnimation(fadeIn);
         bgRightImageView.setAnimation(fadeIn);
@@ -104,6 +107,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
         registerTextView.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
             startActivity(intent);
@@ -112,36 +116,57 @@ public class LoginActivity extends AppCompatActivity {
 
         loginButton.setOnClickListener(view -> validateField());
     }
+
     @Override
-    public void onBackPressed() { finish(); }
-    public  void validateField(){
+    public void onBackPressed() {
+        finish();
+    }
+
+    public void validateField(){
+
         String email = Objects.requireNonNull(userTextInputEditText.getText()).toString().trim();
         String password = Objects.requireNonNull(passwordTextInputEditText.getText()).toString().trim();
 
+        boolean valid = true;
+
         if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             userTextInputEditText.setError(getString(R.string.errorMail));
+            valid = false;
         } else {
             userTextInputEditText.setError(null);
         }
 
         if (password.isEmpty()) {
             passwordTextInputEditText.setError(getString(R.string.errorPass));
+            valid = false;
         } else {
             passwordTextInputEditText.setError(null);
         }
-        startSession(email, password);
-    }
 
-    public void startSession(String email, String password){
-        if (email.isEmpty() || password.isEmpty()){
-            errorFieldTextView.setVisibility(View.VISIBLE);
-            errorFieldTextView.setText(R.string.errorIntern);
-        } else {
-            errorFieldTextView.setVisibility(View.GONE);
-            Intent intent = new Intent(LoginActivity.this, IntroActivity.class);
-            startActivity(intent);
-            finish();
+        if(valid){
+            startSession(email, password);
         }
     }
 
+    public void startSession(String email, String password){
+
+        loginButton.setEnabled(false);
+
+        auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(task -> {
+
+                    loginButton.setEnabled(true);
+
+                    if(task.isSuccessful()){
+                        errorFieldTextView.setVisibility(View.GONE);
+
+                        Intent intent = new Intent(LoginActivity.this, IntroActivity.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        errorFieldTextView.setVisibility(View.VISIBLE);
+                        errorFieldTextView.setText("Correo o contraseña incorrectos");
+                    }
+                });
+    }
 }

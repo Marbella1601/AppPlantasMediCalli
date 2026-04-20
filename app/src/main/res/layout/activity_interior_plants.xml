@@ -15,7 +15,7 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    tools:context=".content.plant.InteriorPlantsActivity">
+    tools:context=".content.plant.Dolor_EstomacalActivity">
 
     <ImageView
         android:id="@+id/backgroundImageInterior"

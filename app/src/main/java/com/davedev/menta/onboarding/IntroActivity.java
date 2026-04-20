@@ -1,14 +1,6 @@
 package com.davedev.menta.onboarding;
 
-/*
- * Nombre del Proyecto: Menta
- * Desarrollador: David Butrón
- * Perfil de Github: https://github.com/DaveDeveloper117/
- * Diseñador UI/UX: Valam Matías https://github.com/OmniSk8
- * Diseñador UI/UX: Marco Malagon https://github.com/SpartanTerra69
- * Licencia: https://github.com/DaveDeveloper117/Menta/blob/master/LICENSE
- * URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
- */
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -48,10 +40,24 @@ public class IntroActivity extends AppCompatActivity {
         btnStart.setVisibility(View.GONE);
 
         List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Aprende los cuidados", "Las plantas son tus mejores compañeros, necesitan los mejores cuidados, por ello te recomendamos como hacerlo de manera correcta y efectiva.", R.raw.plants));
-        mList.add(new ScreenItem("Descubre nuevas plantas", "¿Aún no sabes que planta elegir?, no te preocupes nosotros te ayudamos cuál elegir, explora entre las distintas variedades de plantas.", R.raw.plant_potted));
-        mList.add(new ScreenItem("Conoce sus características", "Cada planta es un mundo nuevo, son diferentes seres vivos y nosotros te enseñamos a que te temperatura crecen, la humedad y el tamaño que alcanzan.", R.raw.phone_plant));
 
+        mList.add(new ScreenItem(
+                "Aprende a cuidar plantas medicinales",
+                "Las plantas medicinales requieren cuidados especiales. Te enseñamos cómo regarlas, dónde colocarlas y cómo mantenerlas saludables para aprovechar todos sus beneficios.",
+                R.raw.plants
+        ));
+
+        mList.add(new ScreenItem(
+                "Descubre plantas para tu salud",
+                "¿No sabes qué planta medicinal usar? Aquí encontrarás opciones según tus necesidades, como plantas para la tos, el estrés o problemas digestivos.",
+                R.raw.plant_potted
+        ));
+
+        mList.add(new ScreenItem(
+                "Conoce sus propiedades y beneficios",
+                "Cada planta medicinal tiene propiedades únicas. Aprende para qué sirve, cómo usarla correctamente y qué beneficios puede aportar a tu bienestar.",
+                R.raw.phone_plant
+        ));
         screenPager = findViewById(R.id.screenPager);
         introViewPagerAdapter = new IntroViewPagerAdapter(this, mList);
         screenPager.setAdapter(introViewPagerAdapter);

@@ -14,7 +14,7 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".content.plant.SeasonalPlantsActivity">
+    tools:context=".content.plant.Dolor_Cabeza">
 
     <ImageView
         android:id="@+id/backgroundImageInterior"
@@ -29,7 +29,7 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_plantas_temporada"
+        app:srcCompat="@drawable/fd"
         tools:ignore="ImageContrastCheck" />
 
     <TextView
@@ -50,10 +50,13 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        app:fastScrollHorizontalThumbDrawable="@drawable/fd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchViewSeasonal" />
+        app:layout_constraintTop_toBottomOf="@+id/searchViewSeasonal"
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchViewSeasonal"

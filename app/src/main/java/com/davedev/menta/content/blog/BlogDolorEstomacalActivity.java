@@ -9,7 +9,7 @@ import com.davedev.menta.R;
 import com.davedev.menta.menu.DashboardActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class BlogInteriorPlantsActivity extends AppCompatActivity {
+public class BlogDolorEstomacalActivity extends AppCompatActivity {
 
     FloatingActionButton fabBack;
 
@@ -23,7 +23,7 @@ public class BlogInteriorPlantsActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(BlogInteriorPlantsActivity.this, DashboardActivity.class);
+        Intent intent = new Intent(BlogDolorEstomacalActivity.this, DashboardActivity.class);
         startActivity(intent);
         finish();
     }

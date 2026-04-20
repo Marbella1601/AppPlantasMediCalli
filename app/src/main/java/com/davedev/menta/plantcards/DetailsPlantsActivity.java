@@ -22,7 +22,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.davedev.menta.R;
-import com.davedev.menta.content.plant.InteriorPlantsActivity;
+import com.davedev.menta.content.plant.Dolor_EstomacalActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DetailsPlantsActivity extends AppCompatActivity {
@@ -90,7 +90,7 @@ public class DetailsPlantsActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(DetailsPlantsActivity.this, InteriorPlantsActivity.class);
+        Intent intent = new Intent(DetailsPlantsActivity.this, Dolor_EstomacalActivity.class);
         startActivity(intent);
         finish();
     }

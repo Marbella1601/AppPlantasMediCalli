@@ -14,6 +14,8 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FEFFFFFF"
+    android:foregroundTint="#FBFAFA"
     tools:context=".menu.DashboardActivity">
 
     <ImageView
@@ -21,14 +23,18 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:adjustViewBounds="true"
+        android:background="#BFFFFFFF"
+        android:backgroundTint="#FEFFFFFF"
         android:contentDescription="@string/content_description_media"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
+        android:tint="#16FFFFFF"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg_dash"
+        app:srcCompat="@drawable/fondo"
         tools:ignore="ImageContrastCheck" />
 
 
@@ -42,32 +48,29 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
 
         <!-- Main content -->
 
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabLogo"
-            style="@style/Widget.App.FloatingActionButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="76dp"
             android:layout_gravity="center|center_vertical"
             android:layout_margin="16dp"
-            android:clickable="true"
-            android:contentDescription="@string/fab_content_desc"
-            android:enabled="true"
-            android:focusable="true"
-            app:elevation="0dp"
-            app:srcCompat="@drawable/ic_menta"
-            tools:ignore="DuplicateSpeakableTextCheck,ImageContrastCheck" />
-
+            app:srcCompat="@drawable/lg"
+            app:tint="@null" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <TextView
         android:id="@+id/titleTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="453dp"
+        android:layout_height="95dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="@string/encontremos_tus_plantas_preferidas"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline4"
+        android:textColor="#101010"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout" />
@@ -93,24 +96,33 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardInterior"
-                android:layout_margin="8dp"
+                style="@style/Widget.App.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.App.CardView"
-                app:cardPreventCornerOverlap="false"
+                android:layout_margin="8dp"
                 android:clickable="false"
-                android:focusable="false">
+                android:focusable="false"
+                app:cardPreventCornerOverlap="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/plantas_de_exterior"
+                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
+                        tools:ignore="TextContrastCheck" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="8dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="8dp">
 
                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/fabInterior"
@@ -120,6 +132,7 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                             android:clickable="false"
                             android:contentDescription="@string/fab_content_desc"
                             android:focusable="false"
+                            app:backgroundTint="#4DFFFFFF"
                             app:borderWidth="0dp"
                             app:elevation="0dp"
                             app:fabSize="mini"
@@ -138,21 +151,54 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
 
                     </LinearLayout>
 
-                    <com.google.android.material.imageview.ShapeableImageView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="220dp"
-                        android:contentDescription="@string/content_description_media"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/plantas_interior"
-                        app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"/>
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:padding="8dp"
-                    android:orientation="vertical">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:contentDescription="@string/content_description_media"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"
+                            app:srcCompat="@drawable/dolorestomago" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnBlogInterior"
+                                style="@style/Widget.App.Button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/ver_blog"
+                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+                                app:cornerRadius="8dp"
+                                tools:ignore="TextContrastCheck" />
+
+                            <Button
+                                android:id="@+id/btnInterior"
+                                style="@style/Widget.App.Button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/ver_plantas"
+                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+                                app:cornerRadius="8dp"
+                                tools:ignore="TextContrastCheck" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -162,52 +208,19 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                         android:textColor="?android:attr/textColorSecondary"
                         tools:ignore="TextContrastCheck" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/btnBlogInterior"
-                            style="@style/Widget.App.Button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:text="@string/ver_blog"
-                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
-                            app:cornerRadius="8dp"
-                            tools:ignore="TextContrastCheck" />
-
-                        <Button
-                            android:id="@+id/btnInterior"
-                            style="@style/Widget.App.Button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:text="@string/ver_plantas"
-                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
-                            app:cornerRadius="8dp"
-                            tools:ignore="TextContrastCheck" />
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardExterior"
-                android:layout_margin="8dp"
+                style="@style/Widget.App.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:clickable="false"
                 android:focusable="false"
-                app:cardPreventCornerOverlap="false"
-                style="@style/Widget.App.CardView">
+                app:cardPreventCornerOverlap="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -217,8 +230,8 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="8dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="8dp">
 
                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/fabExterior"
@@ -234,15 +247,6 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                             app:srcCompat="@drawable/ic_grass_24"
                             tools:ignore="ImageContrastCheck" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginStart="8dp"
-                            android:text="@string/plantas_de_exterior"
-                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
-                            tools:ignore="TextContrastCheck" />
-
                     </LinearLayout>
 
                     <com.google.android.material.imageview.ShapeableImageView
@@ -250,16 +254,16 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                         android:layout_height="220dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/plantas_exterior"
                         app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"/>
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"
+                        app:srcCompat="@drawable/ts" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:padding="8dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -271,28 +275,28 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <Button
                                 android:id="@+id/btnBlogExterior"
                                 style="@style/Widget.App.Button"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/ver_blog" />
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/ver_blog"
+                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+                                app:cornerRadius="8dp" />
 
                             <Button
                                 android:id="@+id/btnExterior"
                                 style="@style/Widget.App.Button"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/ver_plantas" />
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/ver_plantas"
+                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+                                app:cornerRadius="8dp" />
 
                         </LinearLayout>
 
@@ -304,13 +308,13 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardSeason"
+                style="@style/Widget.App.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:clickable="false"
                 android:focusable="false"
-                app:cardPreventCornerOverlap="false"
-                style="@style/Widget.App.CardView">
+                app:cardPreventCornerOverlap="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -320,27 +324,27 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="8dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="8dp">
 
                         <com.google.android.material.floatingactionbutton.FloatingActionButton
                             android:id="@+id/fabSeason"
+                            style="@style/Widget.App.FloatingActionButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:fabSize="mini"
-                            style="@style/Widget.App.FloatingActionButton"
-                            app:elevation="0dp"
-                            app:borderWidth="0dp"
                             android:clickable="false"
-                            android:focusable="false"
                             android:contentDescription="@string/fab_content_desc"
-                            app:srcCompat="@drawable/ic_spa_24"/>
+                            android:focusable="false"
+                            app:borderWidth="0dp"
+                            app:elevation="0dp"
+                            app:fabSize="mini"
+                            app:srcCompat="@drawable/ic_spa_24" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
                             android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
                             android:text="@string/plantas_de_temporada"
                             android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6" />
 
@@ -351,16 +355,16 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                         android:layout_height="220dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/plantas_temporada"
                         app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"/>
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"
+                        app:srcCompat="@drawable/cabeza" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:padding="8dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -372,28 +376,28 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <Button
                                 android:id="@+id/btnBlogSeason"
                                 style="@style/Widget.App.Button"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/ver_blog" />
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/ver_blog"
+                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+                                app:cornerRadius="8dp" />
 
                             <Button
                                 android:id="@+id/btnSeason"
                                 style="@style/Widget.App.Button"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/ver_plantas" />
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/ver_plantas"
+                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+                                app:cornerRadius="8dp" />
 
                         </LinearLayout>
 
@@ -405,63 +409,63 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardFlowers"
+                style="@style/Widget.App.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:clickable="false"
                 android:focusable="false"
-                app:cardPreventCornerOverlap="false"
-                style="@style/Widget.App.CardView">
+                app:cardPreventCornerOverlap="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="8dp"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/fabFlower"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:fabSize="mini"
-                            style="@style/Widget.App.FloatingActionButton"
-                            app:elevation="0dp"
-                            app:borderWidth="0dp"
-                            android:clickable="false"
-                            android:focusable="false"
-                            android:contentDescription="@string/fab_content_desc"
-                            app:srcCompat="@drawable/ic_flower_24"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/flores"
-                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6" />
-
-                    </LinearLayout>
-
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="match_parent"
                         android:layout_height="220dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/flores_card"
                         app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"/>
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Card.Media"
+                        app:srcCompat="@drawable/muscular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fabFlower"
+                            style="@style/Widget.App.FloatingActionButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:contentDescription="@string/fab_content_desc"
+                            android:focusable="false"
+                            app:borderWidth="0dp"
+                            app:elevation="0dp"
+                            app:fabSize="mini"
+                            app:srcCompat="@drawable/ic_flower_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/flores"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6" />
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:padding="8dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="8dp">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -473,28 +477,28 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="end">
+                            android:gravity="end"
+                            android:orientation="horizontal">
 
                             <Button
                                 android:id="@+id/btnBlogFlower"
                                 style="@style/Widget.App.Button"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/ver_blog" />
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/ver_blog"
+                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+                                app:cornerRadius="8dp" />
 
                             <Button
                                 android:id="@+id/btnFlower"
                                 style="@style/Widget.App.Button"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/ver_flores" />
+                                android:layout_marginEnd="8dp"
+                                android:text="@string/ver_flores"
+                                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Button"
+                                app:cornerRadius="8dp" />
 
                         </LinearLayout>
 

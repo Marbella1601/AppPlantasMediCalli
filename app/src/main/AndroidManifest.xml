@@ -40,7 +40,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".content.blog.BlogInteriorPlantsActivity"
+            android:name=".content.blog.BlogDolorEstomacalActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -58,7 +58,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".content.plant.FlowersActivity"
+            android:name=".content.plant.Dolor_Muscular"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -76,7 +76,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".content.plant.SeasonalPlantsActivity"
+            android:name=".content.plant.Dolor_Cabeza"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -85,7 +85,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".content.plant.ExteriorPlantsActivity"
+            android:name=".content.plant.TosInfeccionesRespiratoriasActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -94,7 +94,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".content.plant.InteriorPlantsActivity"
+            android:name=".content.plant.Dolor_EstomacalActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Menta</string>
+    <string name="app_name">MediCalli</string>
     <string name="iniciar_sesion_aqui"><u>Regístrate aquí</u></string>
     <string name="inicie_sesi_n_aqu"><u>Inicie sesión aquí</u></string>
     <string name="la_contrase_a_debe_incluir_al_menos_8_caracteres_y_1_n_mero"><i>La contraseña debe incluir al menos 8 caracteres y 1 número</i></string>
@@ -14,17 +14,17 @@
     <string name="supporting_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo lacus quis ligula fringilla consectetur. Curabitur et justo nulla. Nam ac ullamcorper odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ultricies posuere sem condimentum ornare. Morbi facilisis sit amet ligula id aliquet. In rutrum eleifend mi nec laoreet. Morbi dapibus eros et velit tempor tempor. Fusce congue, libero non finibus dictum, leo odio pulvinar magna, id euismod justo augue vitae ligula.</string>
     <string name="action_1">Acción 1</string>
     <string name="action_2">Acción 2</string>
-    <string name="encontremos_tus_plantas_preferidas">Encontremos tus plantas preferidas!</string>
-    <string name="plantas_de_interior">Plantas de interior</string>
-    <string name="conoce_la_variedad_de_plantas_que_puedes_tener_dentro_en_casa">Conoce la variedad de plantas que puedes tener dentro en casa</string>
+    <string name="encontremos_tus_plantas_preferidas">Encuentra Tus Plantas Medicinales!</string>
+    <string name="plantas_de_interior">Plantas para Dolor Estomacal</string>
+    <string name="conoce_la_variedad_de_plantas_que_puedes_tener_dentro_en_casa">Conoce la variedad de plantas medicinales para el dolor estomacal</string>
     <string name="ver_plantas">Ver Plantas</string>
-    <string name="plantas_de_exterior">Plantas de exterior</string>
-    <string name="descubre_las_plantas_que_puedes_tener_en_tu_jard_n">Descubre las plantas que puedes tener en tu jardín</string>
-    <string name="plantas_de_temporada">Plantas de temporada</string>
-    <string name="las_plantas_por_fecha_y_epoca_del_a_o">Las plantas por fecha y epoca del año</string>
-    <string name="flores">Flores</string>
-    <string name="encuentra_todas_tus_flores_favoritas_y_las_m_s_llamativas">Encuentra todas tus flores favoritas y las más llamativas</string>
-    <string name="ver_flores">Ver Flores</string>
+    <string name="plantas_de_exterior">Plantas para tos y infeccion respiratoria</string>
+    <string name="descubre_las_plantas_que_puedes_tener_en_tu_jard_n">Descubre las plantas que te pueden servir para la tos</string>
+    <string name="plantas_de_temporada">Dolor de cabeza</string>
+    <string name="las_plantas_por_fecha_y_epoca_del_a_o">Descubre las plantas para el dolor cabeza</string>
+    <string name="flores">Dolor Muscular</string>
+    <string name="encuentra_todas_tus_flores_favoritas_y_las_m_s_llamativas">Encuentra todas tus plantas medicinales para el dolor muscular</string>
+    <string name="ver_flores">Ver plantas</string>
     <string name="search_hint">Buscar Plantas</string>
     <string name="ver_blog">Ver Blog</string>
     <string name="errorCaracter">Mínimo 8 caracteres</string>

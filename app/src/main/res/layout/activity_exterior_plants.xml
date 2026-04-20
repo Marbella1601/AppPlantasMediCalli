@@ -14,7 +14,7 @@ URL del Repositorio: https://github.com/DaveDeveloper117/Menta.git
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".content.plant.ExteriorPlantsActivity">
+    tools:context=".content.plant.TosInfeccionesRespiratoriasActivity">
 
     <ImageView
         android:id="@+id/backgroundImageInterior"

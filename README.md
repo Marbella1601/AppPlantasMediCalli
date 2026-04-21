@@ -25,12 +25,12 @@ Para utilizar la aplicación Menta, se requiere lo siguiente:
 
 ## Instalación 📥
 
-Para instalar la aplicación Menta, sigue estos pasos:
+Para instalar la aplicación mediCalli, sigue estos pasos:
 
 1.  Clona el repositorio en tu computadora:
 
 ```bash 
-git clone https://github.com/DaveDeveloper117/Menta.git
+git clone https://github.com/Marbella1601/AppPlantasMediCalli
 ```
 
 2.  Abre el proyecto en Android Studio

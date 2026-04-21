@@ -1,11 +1,11 @@
-# Menta <img align="center" src="https://user-images.githubusercontent.com/64762472/233758839-249a4c43-1e92-4132-8709-0938b0a76cc5.png" alt="logo" width="50"> 
+# MediCalli <img align="center" src="https://user-images.githubusercontent.com/64762472/233758839-249a4c43-1e92-4132-8709-0938b0a76cc5.png" alt="logo" width="50"> 
 
 
-Menta es una aplicación móvil que contiene una plantilla de UI/UX para una app de plantas. Esta plantilla se desarrolló en Android Studio con la versión del SDK 33 y se utilizó la librería Material You para el diseño de la aplicación.
+MediCalli es una aplicación móvil que contiene una plantilla de UI/UX para una app de plantas. Esta plantilla se desarrolló en Android Studio con la versión del SDK 33 y se utilizó la librería Material You para el diseño de la aplicación.
 
 ## Descripción 🗒️
 
-La aplicación Menta es solo un demo que contiene las siguientes funciones:
+La aplicación MediCalli es solo un demo que contiene las siguientes funciones:
 
 -   Login
 -   Signup
@@ -38,7 +38,7 @@ git clone https://github.com/DaveDeveloper117/Menta.git
 
 ## Live Demo 📱
 
-Puedes ver una demostración en vivo de la aplicación Menta en el siguiente enlace: [MentaLiveDemo](https://appetize.io/app/4haepqi7frvg2syjgtusayqc5m)
+Puedes ver una demostración en vivo de la aplicación Menta en el siguiente enlace: [MediCalliLiveDemo](https://appetize.io/app/4haepqi7frvg2syjgtusayqc5m)
 
 Ten en cuenta que esta demostración es solo una representación de la aplicación y no incluye todas las funciones disponibles en la versión completa de Menta. Además, la velocidad y el rendimiento pueden verse afectados por factores como la calidad de la conexión a Internet y el dispositivo utilizado.
 
@@ -46,7 +46,7 @@ Si deseas probar todas las funciones de la aplicación, te recomendamos que siga
 
 ## Cómo usar la aplicación 🧑‍🏫
 
-Después de instalar Menta, puedes probar las diferentes funciones de la aplicación:
+Después de instalar MediCalli, puedes probar las diferentes funciones de la aplicación:
 
 1.  Inicia sesión en la aplicación utilizando las credenciales predeterminadas o crea una nueva cuenta
 2.  Si olvidaste tu contraseña, puedes recuperarla a través de la función "Recuperar contraseña"
@@ -81,8 +81,9 @@ Hexadecimal
 
 ## Contribuidores ♥️
 
-- Eduardo Valam Matías Bautista - Diseñador ([@OmniSk8](https://github.com/OmniSk8))
-- Marco Antonio Malagon Perdomo - Diseñador ([@SpartanTerra69](https://github.com/SpartanTerra69))
+- Marbella Mixteco Zepahua- Diseñador 
+- Daniela Paola Texcahua Galvez - Diseñador
+- Norma Daniela Colohua Oltehua - Diseñador 
 
 
 ## Licencia 🔑

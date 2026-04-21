@@ -88,4 +88,4 @@ Hexadecimal
 
 ## Licencia 🔑
 
-Menta se distribuye bajo la Licencia MIT. Para más información, consulta el archivo [LICENSE](https://github.com/DaveDeveloper117/Menta/blob/master/LICENSE) en este repositorio.
+Menta se distribuye bajo la Licencia MIT. Para más información, consulta el archivo [LICENSE]https://github.com/Marbella1601/AppPlantasMediCalli/blob/master/LICENSE. en este repositorio.

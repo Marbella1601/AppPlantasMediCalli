@@ -1,7 +1,7 @@
 # MediCalli <img align="center" src="https://user-images.githubusercontent.com/64762472/233758839-249a4c43-1e92-4132-8709-0938b0a76cc5.png" alt="logo" width="50"> 
 
 
-MediCalli es una aplicación móvil que contiene una plantilla de UI/UX para una app de plantas. Esta plantilla se desarrolló en Android Studio con la versión del SDK 33 y se utilizó la librería Material You para el diseño de la aplicación.
+MediCalli es una aplicación móvil que contiene una plantilla de UI/UX para una app de plantas medicinales . Esta plantilla se desarrolló en Android Studio con la versión del SDK 33 y se utilizó la librería Material You para el diseño de la aplicación.
 
 ## Descripción 🗒️
 
@@ -38,7 +38,7 @@ git clone https://github.com/Marbella1601/AppPlantasMediCalli
 
 ## Live Demo 📱
 
-Puedes ver una demostración en vivo de la aplicación Menta en el siguiente enlace: [MediCalliLiveDemo](https://appetize.io/app/4haepqi7frvg2syjgtusayqc5m)
+Puedes ver una demostración en vivo de la aplicación MediCalli en el siguiente enlace: [MediCalliLiveDemo](https://appetize.io/app/4haepqi7frvg2syjgtusayqc5m)
 
 Ten en cuenta que esta demostración es solo una representación de la aplicación y no incluye todas las funciones disponibles en la versión completa de Menta. Además, la velocidad y el rendimiento pueden verse afectados por factores como la calidad de la conexión a Internet y el dispositivo utilizado.
 
@@ -63,7 +63,6 @@ A continuación se muestran algunas imágenes de demostración de la aplicación
 
 ## Paleta de Colores UI 🎨
 
-![Menta UI Color](https://user-images.githubusercontent.com/64762472/233757411-96629db1-53fc-4e6f-a118-358f7ed709f0.png)
 
 Hexadecimal
 
@@ -88,4 +87,4 @@ Hexadecimal
 
 ## Licencia 🔑
 
-MediCalli se distribuye bajo la Licencia MIT. Para más información, consulta el archivo [LICENSE]https://github.com/Marbella1601/AppPlantasMediCalli/blob/master/LICENSE. en este repositorio.
+MediCalli se distribuye bajo la Licencia MIT. 
